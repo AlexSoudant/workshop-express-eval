@@ -1,11 +1,13 @@
+// You should be able to request (with GET) the web server (port 4400) on URL /bingo and it should return you 'Bingo'.
+
 const app = require('./src/app');
 
 // port
-const port = process.argv[2]|| 3000;
+const port = process.argv[2]|| 4400;
 
 // start server here
-app.get('/', function (req, res) {
-  res.send('Hello web server')
+app.get('/bingo', function (req, res) {
+  res.send('Bingo')
 })
 
 
